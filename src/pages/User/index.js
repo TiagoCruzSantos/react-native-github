@@ -63,6 +63,10 @@ export default class User extends Component{
         }
     }
 
+    hadleNavigate = (repository) => {
+        this.props.navigation.navigate('GithubPage', {repository})
+    }
+
     render(){
         const {user} = this.props.route.params
         const {stars, loading} = this.state
@@ -80,7 +84,7 @@ export default class User extends Component{
                     <Starred>
                         <OwnerAvatar source={{uri: item.owner.avatar_url}}/>
                         <Info>
-                            <Title onPress={() => {}}>{item.name}</Title>
+                            <Title onPress={() => this.hadleNavigate(item)}>{item.name}</Title>
                             <Author>{item.owner.login}</Author>
                         </Info>
                     </Starred>

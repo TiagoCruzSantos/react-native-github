@@ -3,7 +3,8 @@ import { View } from 'react-native'
 
 class GithubPage extends Component{
     render(){
-        <View></View>        
+        console.log(this.props.route.params.repository.html_url)
+        return (<View></View>)
     }
 }
 
