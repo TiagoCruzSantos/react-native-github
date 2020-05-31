@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { WebView } from 'react-native-webview'
 
 class GithubPage extends Component{
     render(){
-        console.log(this.props.route.params.repository.html_url)
-        return (<View></View>)
+        return (<WebView source={{uri: this.props.route.params.repository.html_url}} style={{flex: 1}}/>)
     }
 }
 

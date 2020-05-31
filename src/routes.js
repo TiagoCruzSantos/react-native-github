@@ -24,7 +24,7 @@ function Routes(){
                     }}>
                 <Stack.Screen name='Main' component={Main} options={{title:"Usuários"}}/>
                 <Stack.Screen name='User' component={User} options={({ route }) => ({ title: route.params.user.name })}/>
-                <Stack.Screen name='GithubPage' component={GithubPage}/>
+                <Stack.Screen name='GithubPage' component={GithubPage} options={({route}) => ({title: route.params.repository.name})}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
